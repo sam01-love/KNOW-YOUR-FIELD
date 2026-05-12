@@ -220,7 +220,7 @@
      text-transform: uppercase;
      padding: .35rem .9rem;
      border-radius: 20px;
-     margin-bottom: 1.3rem;
+     margin: 3.9rem, 0, 1.3rem,0;
      border: 1px solid rgba(108, 63, 214, .2)
  }
 
