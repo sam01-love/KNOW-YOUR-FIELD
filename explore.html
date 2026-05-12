@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Fields — Know Your Field</title>
+    <link rel="shortcut icon" type="image/png" href="KYF logo.png" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="explore.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav class="kyf-nav">
+        <a class="kyf-logo" href="index.html">
+            <img src="KYF logo.png" alt="Website Logo" width="30px" height="30px">
+            <span class="lk">Know</span>&nbsp;<span class="ly">Your</span>&nbsp;<span class="lf">Field</span>
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html" class="active">Explore Fields</a></li>
+            <li><a href="requirements.html">Requirements</a></li>
+            <li><a href="login.html" class="nav-cta">Student Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <span class="eyebrow">Career Explorer</span>
+        <h1>Find <span>your field</span>,<br />know what it takes</h1>
+        <p>Browse career fields and click on any to see the full academic, skill, and character requirements expected of
+            you.</p>
+    </div>
+
+    <div class="filter-bar">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn active" onclick="filter('all',this)">All Fields</button>
+        <button class="filter-btn" onclick="filter('Healthcare',this)">Healthcare</button>
+        <button class="filter-btn" onclick="filter('STEM',this)">STEM</button>
+        <button class="filter-btn" onclick="filter('Business',this)">Business</button>
+        <button class="filter-btn" onclick="filter('Arts',this)">Arts & Social</button>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search a field..." oninput="search(this.value)" />
+        </div>
+    </div>
+
+    <section class="fields-section">
+        <div class="fields-grid" id="fieldsGrid"></div>
+        <div class="no-results" id="noResults">No fields match your search. Try a different keyword.</div>
+    </section>
+
+    <footer class="kyf-footer">
+        <p>Empowering secondary students with career clarity.</p>
+        <p>© 2026 Know Your Field. All rights reserved.</p>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="overlay" onclick="closeModal(event)">
+        <div class="modal" id="modal">
+            <div class="modal-head">
+                <div class="modal-icon" id="mIcon"></div>
+                <div class="modal-head-top">
+                    <div>
+                        <h2 id="mTitle"></h2>
+                        <div class="modal-cat" id="mCat"></div>
+                    </div>
+                    <button class="modal-close" onclick="closeModalDirect()">✕</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="req-block r-academic">
+                    <div class="req-block-head">
+                        <div class="ricon">📚</div>
+                        <h3>Academic Requirements</h3>
+                    </div>
+                    <ul class="req-items" id="mAcademic"></ul>
+                </div>
+                <div class="req-block r-skill">
+                    <div class="req-block-head">
+                        <div class="ricon">⚡</div>
+                        <h3>Skill Requirements</h3>
+                    </div>
+                    <ul class="req-items" id="mSkill"></ul>
+                </div>
+                <div class="req-block r-character">
+                    <div class="req-block-head">
+                        <div class="ricon">🌟</div>
+                        <h3>Character Requirements</h3>
+                    </div>
+                    <ul class="req-items" id="mCharacter"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="explore.js"></script>
+</body>
+
+</html>

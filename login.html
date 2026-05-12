@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Login — Know Your Field</title>
+  <link rel="shortcut icon" type="image/png" href="KYF logo.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+  <link href="student.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <nav class="kyf-nav">
+    <a class="kyf-logo" href="index.html">
+      <img src="KYF logo.png" alt="Website Logo" width="30px" height="30px">
+      <span class="lk">Know</span>&nbsp;<span class="ly">Your</span>&nbsp;<span class="lf">Field</span></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="explore.html">Explore Fields</a></li>
+      <li><a href="requirements.html">Requirements</a></li>
+      <li><a href="login.html" class="nav-cta active">Student Login</a></li>
+    </ul>
+  </nav>
+
+  <div class="login-page">
+    <!-- LEFT PANEL -->
+    <div class="login-left">
+      <div class="left-content">
+        <div class="left-logo">Know Your <span>Field</span></div>
+        <h2>Your career clarity<br />starts here.</h2>
+        <p>Join thousands of secondary school students who are taking charge of their future — one informed step at a
+          time.</p>
+        <ul class="left-benefits">
+          <li>
+            <div class="benefit-icon">🔍</div>Explore 40+ career fields in detail
+          </li>
+          <li>
+            <div class="benefit-icon">📚</div>See academic, skill & character requirements
+          </li>
+          <li>
+            <div class="benefit-icon">💾</div>Save your favourite fields for quick access
+          </li>
+          <li>
+            <div class="benefit-icon">📈</div>Track your progress from JSS to SS3
+          </li>
+          <li>
+            <div class="benefit-icon">🎓</div>Get a personalised career readiness roadmap
+          </li>
+        </ul>
+      </div>
+      <div class="left-deco">🎓</div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="login-right">
+      <div class="form-card">
+        <div class="form-tabs">
+          <button class="form-tab active" id="tab-login" onclick="switchForm('login')">Sign In</button>
+          <button class="form-tab" id="tab-signup" onclick="switchForm('signup')">Create Account</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <div class="form-panel active" id="form-login">
+          <h3>Welcome back</h3>
+          <p class="sub">Sign in to access your career dashboard</p>
+          <div class="form-group">
+            <label>Student Email or ID</label>
+            <input type="text" placeholder="e.g. student@school.edu.ng" />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" />
+          </div>
+          <div class="form-group">
+            <label>Your School Level</label>
+            <select>
+              <option value="">Select your current level</option>
+              <option>JSS 1</option>
+              <option>JSS 2</option>
+              <option>JSS 3</option>
+              <option>SS 1</option>
+              <option>SS 2</option>
+              <option>SS 3</option>
+            </select>
+          </div>
+          <button class="btn-submit">Sign In to My Dashboard →</button>
+          <div class="form-note">Forgot your password? <a href="#">Reset it here</a></div>
+        </div>
+
+        <!-- SIGNUP FORM -->
+        <div class="form-panel" id="form-signup">
+          <h3>Create your account</h3>
+          <p class="sub">It's free — join in under 2 minutes</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Your first name" />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Your last name" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="student@school.edu.ng" />
+          </div>
+          <div class="form-group">
+            <label>School Name</label>
+            <input type="text" placeholder="Name of your school" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Current Level</label>
+              <select>
+                <option value="">Select level</option>
+                <option>JSS 1</option>
+                <option>JSS 2</option>
+                <option>JSS 3</option>
+                <option>SS 1</option>
+                <option>SS 2</option>
+                <option>SS 3</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Stream / Class</label>
+              <select>
+                <option value="">Select stream</option>
+                <option>Science</option>
+                <option>Commercial</option>
+                <option>Arts / Humanities</option>
+                <option>Not decided yet</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Create Password</label>
+            <input type="password" placeholder="At least 8 characters" />
+            <div class="password-hint">Use letters, numbers, and a symbol for a stronger password.</div>
+          </div>
+          <button class="btn-submit">Create My Account →</button>
+          <div class="form-note">By signing up you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy
+              Policy</a>.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="kyf-footer">
+    <div class="fl">Know Your <span>Field</span></div>
+    <p>Empowering secondary students with career clarity.</p>
+    <p>© 2026 Know Your Field. All rights reserved.</p>
+  </footer>
+
+  <script src="student.js"></script>
+</body>
+
+</html>

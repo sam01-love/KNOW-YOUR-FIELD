@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Requirements — Know Your Field</title>
+  <link rel="shortcut icon" type="image/png" href="KYF logo.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+  <link href="requirement.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <nav class="kyf-nav">
+    <a class="kyf-logo" href="index.html">
+      <img src="KYF logo.png" alt="Website Logo" width="30px" height="30px">
+      <span class="lk">Know</span>&nbsp;<span class="ly">Your</span>&nbsp;<span class="lf">Field</span></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="explore.html">Explore Fields</a></li>
+      <li><a href="requirements.html" class="active">Requirements</a></li>
+      <li><a href="login.html" class="nav-cta">Student Login</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <span class="eyebrow">The Three Pillars</span>
+    <h1>What <span>success</span> looks like<br />in every career</h1>
+    <p>Explore each of the three requirement pillars in depth. Understanding all three is what sets truly exceptional
+      students apart.</p>
+  </div>
+
+  <!-- TABS -->
+  <div class="pillar-tabs">
+    <button class="ptab active-academic" id="tab-academic" onclick="switchTab('academic')">📚 Academic
+      Requirements</button>
+    <button class="ptab" id="tab-skill" onclick="switchTab('skill')">⚡ Skill Requirements</button>
+    <button class="ptab" id="tab-character" onclick="switchTab('character')">🌟 Character Requirements</button>
+  </div>
+
+  <!-- ACADEMIC PANEL -->
+  <div class="panel active" id="panel-academic">
+    <div class="panel-intro">
+      <h2>Academic Requirements</h2>
+      <p>These are the formal educational benchmarks every student must meet. This covers subjects, grades, JAMB scores,
+        and university admission criteria across career fields.</p>
+    </div>
+
+    <div class="subject-grid">
+      <div class="subject-card">
+        <div class="sc-icon">📖</div>
+        <div class="sc-title">Core WAEC/NECO Subjects</div>
+        <div class="sc-desc">Most fields require a minimum of five credit passes at O'Level. English Language and
+          Mathematics are compulsory for almost every career. Your remaining three subjects depend on your chosen field
+          — sciences, arts, or commercial subjects.</div>
+        <span class="sc-badge">O'Level</span>
+      </div>
+      <div class="subject-card">
+        <div class="sc-icon">🎯</div>
+        <div class="sc-title">JAMB / UTME Requirements</div>
+        <div class="sc-desc">The Joint Admissions and Matriculation Board score determines university placement. Science
+          fields typically need 240–280+, while Social Science and Arts fields range from 180–220+. Your UTME subject
+          combination must match your intended course.</div>
+        <span class="sc-badge">JAMB</span>
+      </div>
+      <div class="subject-card">
+        <div class="sc-icon">🏛️</div>
+        <div class="sc-title">Post-UTME / Direct Entry</div>
+        <div class="sc-desc">Many universities conduct their own screening exams after JAMB. Top institutions may
+          require 60%+ in Post-UTME. Direct Entry applies to students with OND, HND, or A-Level qualifications seeking
+          admission into 200-Level.</div>
+        <span class="sc-badge">University</span>
+      </div>
+      <div class="subject-card">
+        <div class="sc-icon">📊</div>
+        <div class="sc-title">Grade Benchmarks by Level</div>
+        <div class="sc-desc">Even before WAEC, your performance in JSS 3 assessments, BECE, and your SS1–SS2 continuous
+          assessments build the foundation. Start targeting A's and B's in your key subjects from SS1 — don't wait until
+          SS3.</div>
+        <span class="sc-badge">All Levels</span>
+      </div>
+      <div class="subject-card">
+        <div class="sc-icon">➗</div>
+        <div class="sc-title">Further Mathematics</div>
+        <div class="sc-desc">For Engineering, Computer Science, Medicine, and Economics, Further Mathematics is not
+          compulsory — but it is a significant competitive advantage. It demonstrates high analytical ability and opens
+          advanced mathematical pathways.</div>
+        <span class="sc-badge">Recommended</span>
+      </div>
+      <div class="subject-card">
+        <div class="sc-icon">🌍</div>
+        <div class="sc-title">Studying Abroad Pathways</div>
+        <div class="sc-desc">International universities look at your WASSCE/NECO results plus SAT, IELTS, or TOEFL
+          scores. A strong O'Level record with 7+ A grades positions you competitively for scholarships in the UK, US,
+          Canada, and beyond.</div>
+        <span class="sc-badge">International</span>
+      </div>
+    </div>
+
+    <div class="grade-table">
+      <div class="grade-table-title">📋 Quick Reference: JAMB Score Guide by Field</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Career Field</th>
+            <th>Min JAMB Score</th>
+            <th>Competitive Score</th>
+            <th>Key Subjects</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Medicine / Dentistry</td>
+            <td class="grade-c">260</td>
+            <td class="grade-a">290+</td>
+            <td>Biology, Chemistry, Physics</td>
+          </tr>
+          <tr>
+            <td>Law</td>
+            <td class="grade-c">220</td>
+            <td class="grade-a">260+</td>
+            <td>English, Government/Lit</td>
+          </tr>
+          <tr>
+            <td>Engineering</td>
+            <td class="grade-c">200</td>
+            <td class="grade-a">250+</td>
+            <td>Maths, Physics, Chemistry</td>
+          </tr>
+          <tr>
+            <td>Computer Science</td>
+            <td class="grade-c">200</td>
+            <td class="grade-a">240+</td>
+            <td>Maths, Physics</td>
+          </tr>
+          <tr>
+            <td>Pharmacy</td>
+            <td class="grade-c">220</td>
+            <td class="grade-a">265+</td>
+            <td>Chemistry, Biology, Physics</td>
+          </tr>
+          <tr>
+            <td>Accounting / Economics</td>
+            <td class="grade-c">180</td>
+            <td class="grade-a">220+</td>
+            <td>Maths, Economics, Commerce</td>
+          </tr>
+          <tr>
+            <td>Education / Arts</td>
+            <td class="grade-c">160</td>
+            <td class="grade-a">200+</td>
+            <td>English + relevant subjects</td>
+          </tr>
+          <tr>
+            <td>Architecture</td>
+            <td class="grade-c">180</td>
+            <td class="grade-a">230+</td>
+            <td>Maths, Physics, Fine Art</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SKILL PANEL -->
+  <div class="panel" id="panel-skill">
+    <div class="panel-intro">
+      <h2>Skill Requirements</h2>
+      <p>Skills are the practical abilities that turn academic knowledge into real-world performance. Start building
+        these alongside your studies — they make all the difference.</p>
+    </div>
+
+    <div class="skill-categories">
+      <div class="skill-cat">
+        <div class="skill-cat-head">
+          <div class="sh-icon">🧪</div>
+          <div>
+            <h3>Science & Technical Skills</h3>
+            <p>For STEM and Healthcare fields</p>
+          </div>
+        </div>
+        <ul class="skill-list">
+          <li>Laboratory safety, procedures, and accurate data recording</li>
+          <li>Scientific method: hypothesis, experiment, conclusion</li>
+          <li>Use of measuring instruments and analytical tools</li>
+          <li>Basic coding and computational thinking (Python, Scratch)</li>
+          <li>Engineering drawing and technical schematics</li>
+          <li>Environmental observation and field data collection</li>
+        </ul>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-head">
+          <div class="sh-icon">🗣️</div>
+          <div>
+            <h3>Communication Skills</h3>
+            <p>Essential for every single career</p>
+          </div>
+        </div>
+        <ul class="skill-list">
+          <li>Clear, structured essay and report writing</li>
+          <li>Confident public speaking and oral presentations</li>
+          <li>Active listening and responding under pressure</li>
+          <li>Professional email and formal writing etiquette</li>
+          <li>Debate, argumentation, and persuasive communication</li>
+          <li>Reading comprehension of complex, technical material</li>
+        </ul>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-head">
+          <div class="sh-icon">💡</div>
+          <div>
+            <h3>Critical Thinking & Research</h3>
+            <p>For analytical and professional fields</p>
+          </div>
+        </div>
+        <ul class="skill-list">
+          <li>Identifying problems and proposing structured solutions</li>
+          <li>Evaluating sources, evidence, and arguments</li>
+          <li>Conducting library and internet-based research</li>
+          <li>Data interpretation using charts, graphs, and tables</li>
+          <li>Logical deduction and avoidance of bias</li>
+          <li>Summarising and presenting complex findings clearly</li>
+        </ul>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-head">
+          <div class="sh-icon">💻</div>
+          <div>
+            <h3>Digital & Technology Skills</h3>
+            <p>For the modern workplace in any field</p>
+          </div>
+        </div>
+        <ul class="skill-list">
+          <li>Microsoft Office Suite — Word, Excel, PowerPoint</li>
+          <li>Google Workspace — Docs, Sheets, Slides</li>
+          <li>Basic internet research and information literacy</li>
+          <li>Social media literacy and professional online presence</li>
+          <li>Introduction to design tools (Canva, Figma basics)</li>
+          <li>Data entry, spreadsheet functions, and visualisation</li>
+        </ul>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-head">
+          <div class="sh-icon">🎨</div>
+          <div>
+            <h3>Creative & Artistic Skills</h3>
+            <p>For creative and communication careers</p>
+          </div>
+        </div>
+        <ul class="skill-list">
+          <li>Freehand drawing, sketching, and visual composition</li>
+          <li>Colour theory, typography, and visual storytelling</li>
+          <li>Photography fundamentals and image editing</li>
+          <li>Video production, storyboarding, and editing basics</li>
+          <li>Digital art and graphic design tools (Adobe suite)</li>
+          <li>Creative writing, poetry, and narrative structure</li>
+        </ul>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-head">
+          <div class="sh-icon">🤝</div>
+          <div>
+            <h3>Interpersonal & Leadership Skills</h3>
+            <p>For all management and people-facing roles</p>
+          </div>
+        </div>
+        <ul class="skill-list">
+          <li>Teamwork, cooperation, and shared goal-setting</li>
+          <li>Conflict resolution and de-escalation techniques</li>
+          <li>Time management and personal organisation</li>
+          <li>Mentoring peers and leading group projects</li>
+          <li>Networking and professional relationship-building</li>
+          <li>Giving and receiving constructive feedback gracefully</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHARACTER PANEL -->
+  <div class="panel" id="panel-character">
+    <div class="panel-intro">
+      <h2>Character Requirements</h2>
+      <p>Character is what carries you through when knowledge alone isn't enough. These are the human qualities that
+        employers, institutions, and communities look for in every professional.</p>
+    </div>
+
+    <div class="char-grid">
+      <div class="char-card">
+        <div class="char-icon">💎</div>
+        <div class="char-trait">Integrity</div>
+        <div class="char-desc">Doing the right thing even when no one is watching. Professionals are trusted with
+          information, resources, and lives — honesty is non-negotiable in every field.</div>
+      </div>
+      <div class="char-card">
+        <div class="char-icon">🔥</div>
+        <div class="char-trait">Resilience & Grit</div>
+        <div class="char-desc">The ability to keep going after failure. Every career involves setbacks, rejections, and
+          hard seasons. The students who succeed are those who get back up.</div>
+      </div>
+      <div class="char-card">
+        <div class="char-icon">❤️</div>
+        <div class="char-trait">Empathy</div>
+        <div class="char-desc">Understanding and genuinely caring about other people's experiences. From medicine to law
+          to education — empathy makes you more effective and more human in your work.</div>
+      </div>
+      <div class="char-card">
+        <div class="char-icon">📐</div>
+        <div class="char-trait">Discipline & Consistency</div>
+        <div class="char-desc">Showing up, doing the work, and maintaining standards even when motivation fades. Great
+          results are built through consistent small actions over time.</div>
+      </div>
+      <div class="char-card">
+        <div class="char-icon">🌱</div>
+        <div class="char-trait">Curiosity & Growth Mindset</div>
+        <div class="char-desc">A genuine hunger to learn more, question assumptions, and grow beyond your current
+          limits. The best professionals never stop being students of their craft.</div>
+      </div>
+      <div class="char-card">
+        <div class="char-icon">🤲</div>
+        <div class="char-trait">Accountability</div>
+        <div class="char-desc">Taking ownership of your actions, mistakes, and results — and fixing them. Leaders and
+          trusted professionals hold themselves accountable before others do.</div>
+      </div>
+      <div class="char-card">
+        <div class="char-icon">🧭</div>
+        <div class="char-trait">Ethical Judgment</div>
+        <div class="char-desc">Knowing right from wrong in complex situations and having the courage to act accordingly.
+          Many careers involve difficult ethical decisions — develop your moral compass early.</div>
+      </div>
+      <div class="char-card">
+        <div class="char-icon">⏳</div>
+        <div class="char-trait">Patience</div>
+        <div class="char-desc">Success in any meaningful career takes years. Patience allows you to stay the course,
+          invest in deep learning, and build things that last rather than chasing quick results.</div>
+      </div>
+    </div>
+
+    <div class="char-quote">
+      <blockquote>"Character is the foundation upon which competence is built. Without it, even the most gifted student
+        will struggle to earn the trust that a long and impactful career demands."</blockquote>
+      <cite>— Know Your Field, Student Career Guidance</cite>
+    </div>
+  </div>
+
+  <footer class="kyf-footer">
+    <div class="fl">Know Your <span>Field</span></div>
+    <p>Empowering secondary students with career clarity.</p>
+    <p>© 2026 Know Your Field. All rights reserved.</p>
+  </footer>
+
+  <script src="requirement.js"></script>
+</body>
+
+</html>
