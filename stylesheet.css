@@ -184,11 +184,19 @@
      background: linear-gradient(145deg, #6c3fd6, #0e3fa8)
  }
 
- .slide-emoji {
-     font-size: 11rem;
+ .slide-pic {
+     position: absolute;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     width: auto;
      opacity: .22;
      user-select: none;
-     animation: floatY 5s ease-in-out infinite
+     animation: floatY 5s ease-in-out infinite;
+     clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+     display: flex;
+     align-items: center;
+     justify-content: center;
  }
 
  @keyframes floatY {
@@ -220,7 +228,7 @@
      text-transform: uppercase;
      padding: .35rem .9rem;
      border-radius: 20px;
-     margin: 3.9rem, 0, 1.3rem,0;
+     margin: 3.9rem, 0 1.3rem, 0;
      border: 1px solid rgba(108, 63, 214, .2)
  }
 
