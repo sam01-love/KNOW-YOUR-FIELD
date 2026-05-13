@@ -440,7 +440,23 @@ body {
 
 @media(max-width:860px) {
     .kyf-nav {
-        padding: 0 1.4rem
+        padding: 0 1.4rem;
+        display: grid;
+    }
+
+    .kyf-nav ul a {
+        font-size: .50rem;
+        font-weight: 500;
+        padding: .2rem .3rem;
+        border-radius: 6px;
+    }
+
+    .kyf-nav ul a.nav-cta {
+        background: var(--purple);
+        color: white !important;
+        font-weight: 600;
+        padding: .3rem 0.5rem;
+        border-radius: 6px
     }
 
     .login-page {
