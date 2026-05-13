@@ -698,9 +698,9 @@
      }
 
       .kyf-nav ul a {
-        font-size: .60rem;
+        font-size: .55rem;
         font-weight: 500;
-        padding: .3rem .5rem;
+        padding: .2rem .3rem;
         border-radius: 6px;
     }
 
@@ -708,7 +708,7 @@
         background: var(--purple);
         color: white !important;
         font-weight: 600;
-        padding: .5rem 0.7rem;
+        padding: .3rem 0.5rem;
         border-radius: 6px
     }
 
