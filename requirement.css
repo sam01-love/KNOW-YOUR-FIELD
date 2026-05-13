@@ -531,8 +531,8 @@ tr:hover td {
         display: grid;
     }
 
-    .kyf-nav ul a {
-        font-size: .50rem;
+     .kyf-nav ul a {
+        font-size: .55rem;
         font-weight: 500;
         padding: .2rem .3rem;
         border-radius: 6px;
