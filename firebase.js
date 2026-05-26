@@ -38,3 +38,72 @@ signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         console.log("Logged in");
     });
+
+// CREATE ACCOUNT
+const signupBtn =
+document.getElementById("signup-btn");
+
+signupBtn.addEventListener("click", () => {
+
+  const email =
+  document.getElementById("signup-email").value;
+
+  const password =
+  document.getElementById("signup-password").value;
+
+  createUserWithEmailAndPassword(
+    auth,
+    email,
+    password
+  )
+
+  .then((userCredential) => {
+
+    alert("Account Created!");
+
+    console.log(userCredential.user);
+
+  })
+
+  .catch((error) => {
+
+    alert(error.message);
+
+  });
+
+});
+
+
+// LOGIN
+const loginBtn =
+document.getElementById("login-btn");
+
+loginBtn.addEventListener("click", () => {
+
+  const email =
+  document.getElementById("login-email").value;
+
+  const password =
+  document.getElementById("login-password").value;
+
+  signInWithEmailAndPassword(
+    auth,
+    email,
+    password
+  )
+
+  .then((userCredential) => {
+
+    alert("Login Successful!");
+
+    console.log(userCredential.user);
+
+  })
+
+  .catch((error) => {
+
+    alert(error.message);
+
+  });
+
+});
