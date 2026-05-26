@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "public": "know your field",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "auth": {
+    "providers": {
+      "emailPassword": true,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "KNOW-YOUR-FIELD",
+        "supportEmail": "akins4just@gmail.com"
+      }
+    }
+  }
+}
