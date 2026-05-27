@@ -1,5 +1,5 @@
 // Import from a CDN like unpkg or esm.sh
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.x.x/firebase-app.js";;
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.x/firebase-app.js";;
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.11.0/firebase/firestore.js"
 import { getStorage } from "https://www.gstatic.com/firebasejs/10.11.0/firebase/storage.js"
