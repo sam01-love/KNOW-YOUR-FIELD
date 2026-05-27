@@ -23,7 +23,7 @@
   const analytics = getAnalytics(app);
 
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-const Auth = getAuth(firebaseConfig);
+const auth = getAuth(app);
 
 // const firebaseConfig1 = {
 //     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
