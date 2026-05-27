@@ -6,6 +6,11 @@ import { getStorage } from "https://www.gstatic.com/firebasejs/10.8.0/firebase/s
 
 // Use the imported function instead of re-declaring it
 const app = initializeApp(firebaseConfig);
+
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+export const storage = getStorage(app);
+
 // import { initializeApp } from "firebase/app";
 // import { getAuth } from "firebase/auth";
 // import { getFirestore } from "firebase/firestore";
@@ -20,10 +25,6 @@ const firebaseConfig = {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
-
-export const auth = getAuth(app);
-export const db = getFirestore(app);
-export const storage = getStorage(app);
 
 import {
     createUserWithEmailAndPassword
