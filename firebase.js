@@ -18,13 +18,12 @@
     measurementId: "G-5CBKDCV2ND"
   };
 
-  // Initialize Firebase
+  //Initialise Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+const Auth = getAuth(firebaseConfig);
 
 // const firebaseConfig1 = {
 //     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
