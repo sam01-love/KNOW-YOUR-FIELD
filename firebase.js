@@ -1,3 +1,7 @@
+// Import from a CDN like unpkg or esm.sh
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.x.x/firebase-app.js";
+
+// Your firebase config and initialization...
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
