@@ -1,5 +1,8 @@
 // Import from a CDN like unpkg or esm.sh
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.x.x/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.x.x/firebase-app.js";;
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.11.0/firebase/firestore.js"
+import { getStorage } from "https://www.gstatic.com/firebasejs/10.11.0/firebase/storage.js"
 
 // // Use the imported function instead of re-declaring it
 // const app = initializeApp(firebaseConfig);
@@ -123,4 +126,16 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     return true; 
   }
   // If not async, don't return true; the channel closes automatically
+});
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === 'GET_DATA') {
+    handleAsyncData(message)
+      .then(data => sendResponse({ success: true, data }))
+      .catch(err => sendResponse({ success: false, error: err.message }));
+    return true; // Keep channel open
+  }
+  // If not handling asynchronously, don't return true. 
+  // Optionally call sendResponse immediately.
+  sendResponse({ status: 'unhandled' }); 
 });
