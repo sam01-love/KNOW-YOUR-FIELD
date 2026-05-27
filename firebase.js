@@ -1,8 +1,8 @@
 // Import from a CDN like unpkg or esm.sh
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.x/firebase-app.js";;
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/10.11.0/firebase/firestore.js"
-import { getStorage } from "https://www.gstatic.com/firebasejs/10.11.0/firebase/storage.js"
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";;
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.0/firebase/firestore.js"
+import { getStorage } from "https://www.gstatic.com/firebasejs/10.8.0/firebase/storage.js"
 
 // // Use the imported function instead of re-declaring it
 // const app = initializeApp(firebaseConfig);
