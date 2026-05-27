@@ -1,11 +1,12 @@
 // Import from a CDN like unpkg or esm.sh
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.x.x/firebase-app.js";
 
-// Your firebase config and initialization...
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+// // Use the imported function instead of re-declaring it
+// const app = initializeApp(firebaseConfig);
+// import { initializeApp } from "firebase/app";
+// import { getAuth } from "firebase/auth";
+// import { getFirestore } from "firebase/firestore";
+// import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -110,4 +111,16 @@ loginBtn.addEventListener("click", () => {
 
   });
 
+});
+
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === 'FETCH_DATA') {
+    // Returning true tells Chrome you will call sendResponse later
+    performAsyncAction(message.payload)
+      .then(data => sendResponse({ success: true, data }))
+      .catch(error => sendResponse({ success: false, error: error.message }));
+    return true; 
+  }
+  // If not async, don't return true; the channel closes automatically
 });
