@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Signup — Know Your Field</title>
+  <title>Student Login — Know Your Field</title>
   <link rel="shortcut icon" type="image/png" href="KYF logo.png" />
   <link
     href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
@@ -59,12 +59,12 @@
     <div class="login-right">
       <div class="form-card">
         <div class="form-tabs">
-          <button class="form-tab" id="tab-login" onclick="switchForm('login')">Sign In</button>
-          <button class="form-tab active" id="tab-signup" onclick="switchForm('signup')">Create Account</button>
+          <button class="form-tab active" id="tab-login" onclick="switchForm('login')">Sign In</button>
+          <button class="form-tab" id="tab-signup" onclick="switchForm('signup')">Create Account</button>
         </div>
 
         <!-- LOGIN FORM -->
-        <div class="form-panel" id="form-login">
+        <div class="form-panel active" id="form-login">
           <h3>Welcome back</h3>
           <p class="sub">Sign in to access your career dashboard</p>
           <div class="form-group">
@@ -95,7 +95,7 @@
         </div>
 
         <!-- SIGNUP FORM -->
-        <div class="form-panel active" id="form-signup">
+        <div class="form-panel" id="form-signup">
           <h3>Create your account</h3>
           <p class="sub">It's free — join in under 2 minutes</p>
           <div class="form-row">
@@ -154,22 +154,20 @@
               👁
             </span>
           </div>
-          <div class="password-hint">Use letters, numbers, and a symbol for a stronger password.</div>
+          <button id="signup-btn">Create My Account →</button>
+          <a href="login.html">Already have an account? Sign in here</a>
+          <div class="form-note">By signing up you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy
+              Policy</a>.</div>
         </div>
-        <button id="signup-btn">Create My Account →</button>
-        <a href="login.html">Already have an account? Sign in here</a>
-        <div class="form-note">By signing up you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy
-            Policy</a>.</div>
+
       </div>
     </div>
-  </div>
   </div>
 
   <footer class="kyf-footer">
     <div class="fl">Know Your <span>Field</span></div>
     <p>Empowering secondary students with career clarity.</p>
-    <p>© 2026 Spring Of Wisdom Institute of learning</br>
-      Know Your Field. All rights reserved.</p>
+    <p>© 2026 Know Your Field. All rights reserved.</p>
   </footer>
 
   <script src="student.js"></script>
