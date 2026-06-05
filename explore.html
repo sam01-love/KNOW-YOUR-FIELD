@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Fields — Know Your Field</title>
+    <link rel="shortcut icon" type="image/png" href="KYF logo.png" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="explore.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav class="kyf-nav">
+        <a class="kyf-logo" href="index.html">
+            <img src="KYF logo.png" alt="Website Logo" width="30px" height="30px">
+            <span class="lk">Know</span>&nbsp;<span class="ly">Your</span>&nbsp;<span class="lf">Field</span>
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html" class="active">Explore Fields</a></li>
+            <li><a href="requirements.html">Requirements</a></li>
+            <li><a href="login.html" class="nav-cta">Student Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <div class="header-text">
+            <span class="eyebrow">University Explorer</span>
+            <h1>Find <span>your path</span>,<br />know what it takes</h1>
+            <p>Select your university, faculty, and department to see the exact admission requirements.</p>
+        </div>
+        <!-- NEW: Logo Transition Container -->
+        <div class="header-visual">
+            <div class="header-logos" id="logo-fader">
+                <!-- Add your downloaded university logos here -->
+                <img src="oau logo.jpeg" alt="OAU Logo" class="fading-logo active">
+                <img src="UNILAG.jpeg" alt="UNILAG Logo" class="fading-logo">
+                <img src="1ui logo.jpeg" alt="UI Logo" class="fading-logo">
+                <img src="abu logo.jpeg" alt="ABU Logo" class="fading-logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="admission-checker">
+        <div class="ac-header">
+            <h2>Check Admission Requirements</h2>
+            <p>Select your preferred path to see exact O'Level and UTME requirements.</p>
+        </div>
+
+        <div class="ac-form">
+            <div class="form-group">
+                <label>1. Select University</label>
+                <select id="uni-select" onchange="loadFaculties()">
+                    <option value="">-- Choose a University --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>2. Select Faculty</label>
+                <select id="faculty-select" onchange="loadDepartments()" disabled>
+                    <option value="">-- First choose a University --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>3. Select Department</label>
+                <select id="dept-select" onchange="showCourses()" disabled>
+                    <option value="">-- First choose a Faculty --</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="results-area" class="results-area" style="display: none;">
+            <div class="results-header">
+                <h3>Available Courses</h3>
+                <p>Here is what it takes to get admitted into your selected department.</p>
+            </div>
+            <div id="courses-grid" class="courses-grid">
+            </div>
+        </div>
+    </div>
+
+    <footer class="kyf-footer">
+        <p>Empowering secondary students with career clarity.</p>
+        <p>© 2026 Know Your Field. All rights reserved.</p>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="overlay" onclick="closeModal(event)">
+        <div class="modal" id="modal">
+            <div class="modal-head">
+                <div class="modal-icon" id="mIcon"></div>
+                <div class="modal-head-top">
+                    <div>
+                        <h2 id="mTitle"></h2>
+                        <div class="modal-cat" id="mCat"></div>
+                    </div>
+                    <button class="modal-close" onclick="closeModalDirect()">✕</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="req-block r-academic">
+                    <div class="req-block-head">
+                        <div class="ricon">📚</div>
+                        <h3>Academic Requirements</h3>
+                    </div>
+                    <ul class="req-items" id="mAcademic"></ul>
+                </div>
+                <div class="req-block r-skill">
+                    <div class="req-block-head">
+                        <div class="ricon">⚡</div>
+                        <h3>Skill Requirements</h3>
+                    </div>
+                    <ul class="req-items" id="mSkill"></ul>
+                </div>
+                <div class="req-block r-character">
+                    <div class="req-block-head">
+                        <div class="ricon">🌟</div>
+                        <h3>Character Requirements</h3>
+                    </div>
+                    <ul class="req-items" id="mCharacter"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="explore.js"></script>
+</body>
+
+</html>
