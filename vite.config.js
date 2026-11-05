@@ -1,7 +1,10 @@
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+const isGitHubPages = process.env.GITHUB_PAGES === 'true'
+
 export default defineConfig({
-  base: '/KNOW-YOUR-FIELD/',
-  plugins: [react()]
+  plugins: [react()],
+  base: isGitHubPages ? '/KNOW-YOUR-FIELD/' : '/'
 })
